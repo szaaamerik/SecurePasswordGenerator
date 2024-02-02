@@ -57,7 +57,7 @@
                                   Margin="15"/>   
                     
                     <ui:NumberBox Minimum="8"
-                                  Maximum="50"
+                                  Maximum="{Binding ViewModel.MaxLength}"
                                   Value="{Binding ViewModel.MinLength}"
                                   MaxDecimalPlaces="0"/>
                     
@@ -72,7 +72,7 @@
                                   Padding="5"
                                   Margin="15"/>   
                     
-                    <ui:NumberBox Minimum="1"
+                    <ui:NumberBox Minimum="{Binding ViewModel.MinLength}"
                                   Maximum="50"
                                   Value="{Binding ViewModel.MaxLength}"
                                   MaxDecimalPlaces="0"/>

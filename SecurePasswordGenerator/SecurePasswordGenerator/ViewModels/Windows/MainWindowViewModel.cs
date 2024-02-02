@@ -138,7 +138,6 @@ public partial class MainWindowViewModel : ObservableObject
         var shuffledCharacterSet = new string(characterSet.ToCharArray().OrderBy(_ => Guid.NewGuid()).ToArray());
         var random = new Random();
         var length = random.Next(MinLength, MaxLength + 1);
-    
         var result = new StringBuilder();
 
         for (var i = 0; i < length; i++)
@@ -212,12 +211,12 @@ public partial class MainWindowViewModel : ObservableObject
             score++;
         }
 
-        if (!ContainsDuplicateCharacters(password))
+        if (ContainsDuplicateCharacters(password))
         {
             score--;
         }
 
-        if (!ContainsSequentialCharacters(password))
+        if (ContainsSequentialCharacters(password))
         {
             score--;
         }
@@ -240,11 +239,12 @@ public partial class MainWindowViewModel : ObservableObject
             {
                 if (password[i] == password[j])
                 {
-                    return false;
+                    return true;
                 }
             }
         }
-        return true;
+        
+        return false;
     }
 
     private static bool ContainsSequentialCharacters(string password)
@@ -253,10 +253,11 @@ public partial class MainWindowViewModel : ObservableObject
         {
             if (password[i + 1] == password[i] + 1 || password[i + 1] == password[i] - 1)
             {
-                return false;
+                return true;
             }
         }
-        return true;
+        
+        return false;
     }
 
     [RelayCommand]
