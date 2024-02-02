@@ -240,14 +240,14 @@
                                 Margin="0 20 0 0">
                         
                         <ui:HyperlinkButton Content="Source Code Repository" 
-                                            ToolTip="https://github.com/szaaamerik" 
-                                            NavigateUri="https://github.com/szaaamerik"
+                                            ToolTip="https://github.com/szaaamerik/SecurePasswordGenerator" 
+                                            NavigateUri="https://github.com/szaaamerik/SecurePasswordGenerator"
                                             Cursor="Hand"/>
                         
-                        <!--ui:HyperlinkButton Content="Donations" 
+                        <ui:HyperlinkButton Content="Donations" 
                                             ToolTip="https://www.buymeacoffee.com/merika" 
                                             NavigateUri="https://www.buymeacoffee.com/merika"
-                                            Cursor="Hand"/-->
+                                            Cursor="Hand"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>
